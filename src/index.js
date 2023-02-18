@@ -9,11 +9,11 @@ const player = (name, marker) => {
     const add = () => {} // fills in the selected array Dom element with player.marker
 }
 const game = () => {
-    const start = () => {}// creates a start button that will call the Player name function -- starts the game
-    const winCombos = () => {} // assigns win combinations for the game to evaluate a winner
-    const rounds = () => {} // assigns a total number of rounds the game should iterate for.
-    const winner = () => {} // given win combinations and the total number of rounds, evaluates a winner
-    const end = () => {} // 
-    const displayWinner = () => {} // updates the game display with the winner of the game.
+    const start = () => {};// creates a start button that will call the Player name function -- starts the game
+    const winCombos = () => {}; // assigns win combinations for the game to evaluate a winner
+    const rounds = () => {}; // assigns a total number of rounds the game should iterate for.
+    const winner = () => {}; // given win combinations and the total number of rounds, evaluates a winner
+    const end = () => {}; // 
+    const displayWinner = () => {}; // updates the game display with the winner of the game.
 }
 

@@ -22,13 +22,13 @@ const header = (() => {
 const main = (() => {
     const create = () => {
         const newMain = document.body.appendChild(document.createElement("main"))
-        newMain.setAttribute("class", "main bg-dark w-100 d-flex")
+        newMain.setAttribute("class", "main bg-secondary w-100 d-flex")
         this.main = newMain
         return this.main
     };
     const aside = () => {
         const newAside = this.main.appendChild(document.createElement("aside"))
-        newAside.setAttribute("class", "aside bg-warning d-flex flex-column justify-content-around align-self-start align-items-center col-3 h-50 ")
+        newAside.setAttribute("class", "aside bg-secondary d-flex flex-column justify-content-around align-self-start align-items-center col-3 h-50 ")
         this.aside = newAside
         return this.aside
     };
@@ -43,11 +43,28 @@ const main = (() => {
         name.setAttribute("class", "name-form w-75 h-25")
     };
     const section = () => {
-        const game = this.main.appendChild(document.createElement("section"))
-        game.setAttribute("class", "game bg-secondary col-9")
+        const newSection = this.main.appendChild(document.createElement("section"))
+        newSection.setAttribute("class", "game-container bg-secondary col-9 d-flex flex-column justify-content-around align-items-center")
+        this.section = newSection 
+        return this.section
     };
-
-    return {create, aside, start, section}
+    const article = () => {
+            const game = this.section.appendChild(document.createElement("article"));
+            game.setAttribute("class","board bg-secondary col-9 d-flex flex-column justify-content-around align-items-center h-75 w-100 bg-dark");
+    };
+    const display = () => {
+        const gameDisplay = this.section.appendChild(document.createElement("div"));
+        gameDisplay.setAttribute("class", "display w-100 h-25 bg-light");
+        this.display = gameDisplay
+    };
+    const text = () => {
+        let message = this.display.appendChild(document.createElement("h2"));
+        message.setAttribute("class", "winner-text");
+        message.textContent = ""
+        this.text = message
+        return this.text 
+    };
+    return {create, aside, start, section, article, display, text}
 })(); // creates a main element. creates a section element, creates an aside element. creates a start button.
 const footer = (() => {
     const create = () => {
@@ -78,6 +95,9 @@ main.create()
 main.aside()
 main.start()
 main.section()
+main.display()
+main.article()
+main.text()
 
 // creates footer elements
 footer.create()
