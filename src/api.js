@@ -1,7 +1,7 @@
 const header = (() => {
     const create = () => {
             const newHeader = document.body.appendChild(document.createElement("header"))
-            newHeader.setAttribute("class", "header bg-primary container-fluid")
+            newHeader.setAttribute("class", "header bg-primary container-fluid d-flex justify-content-center align-items-center")
             this.head = newHeader
             return this.head
         };
@@ -14,12 +14,11 @@ const header = (() => {
     };
     const title = () => {
         const navTitle = this.nav.appendChild(document.createElement("h1"))
-        navTitle.setAttribute("class", "title");
+        navTitle.setAttribute("class", "title text-white");
         navTitle.textContent = "Tic Tac Toe"
     };
     return {create, nav, title}
 })(); // creates the header element. creates a nav element. creates a page title.
-
 const main = (() => {
     const create = () => {
         const newMain = document.body.appendChild(document.createElement("main"))
@@ -35,7 +34,7 @@ const main = (() => {
     };
     const start = () => {
         const button = this.aside.appendChild(document.createElement("button"))
-        button.setAttribute("class", "start-button w-50 h-25")
+        button.setAttribute("class", "start-button w-75 h-25 bg-dark text-white")
         button.setAttribute("id", "Start-button")
         button.setAttribute("value", "Start")
         button.textContent = "Start"
@@ -55,14 +54,14 @@ const footer = (() => {
         const newFooter = document.body.appendChild(document.createElement("footer"));
         newFooter.setAttribute(
           "class",
-          "footer bg-primary container-fluid"
+          "footer bg-primary container-fluid d-flex justify-content-center align-items-center"
         );
         this.footer = newFooter
     };
 
     const info = () => {
-        const info = this.footer.appendChild(document.createElement("p"));
-        info.setAttribute("class", "footer-info")
+        const info = this.footer.appendChild(document.createElement("h4"));
+        info.setAttribute("class", "footer-info text-white")
         info.textContent = "Tecnically Austin"
     };
 
