@@ -4,8 +4,8 @@ const gameboard = () => {
     const events = () => {}; // creates event listeners for each DOM element
 }
 const player = (name, marker) => {
-    const name = () => {}// creates a form that requests the user name
-    const marker = () => {} // assigns an X or O marker to the player
+    //const name = () => {} // creates a form that requests the user name
+    //const marker = () => {} // assigns an X or O marker to the player
     const add = () => {} // fills in the selected array Dom element with player.marker
 }
 const game = () => {
