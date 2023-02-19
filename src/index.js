@@ -70,3 +70,4 @@ const game = (() => {
 game.start();
 
 // test commit
+// test commit 2
