@@ -35,7 +35,7 @@ const main = (() => {
     const start = () => {
         const button = this.aside.appendChild(document.createElement("button"))
         button.setAttribute("class", "start-button w-75 h-25 bg-dark text-white")
-        button.setAttribute("id", "Start-button")
+        button.setAttribute("id", "start-button")
         button.setAttribute("value", "Start")
         button.textContent = "Start"
 
